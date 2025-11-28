@@ -1,0 +1,26 @@
+version: "3.8"
+
+services:
+  app-dev:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+      - "3001:3000"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    environment:
+      PUBLIC_KEY: copykeyhere
+
+  app-prod:
+    build:
+      context: .
+      dockerfile: Dockerfile.prod
+    ports:
+      - "4000:80"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    environment:
+      PUBLIC_KEY: copykeyhere
