@@ -1,0 +1,19 @@
+# Git repository files
+.git
+.github
+
+# Dependencies
+node_modules
+
+# Build output
+build
+
+# Logs and temporary files
+npm-debug.log*
+
+# Editor and OS files
+.vscode
+.idea
+*.suo
+*.user
+*.DS_Store
